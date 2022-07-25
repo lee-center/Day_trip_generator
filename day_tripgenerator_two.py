@@ -12,6 +12,8 @@ def give_random_from_list(selected_list):
     random_item = random.choice(selected_list)
     return random_item
 
+
+
 def welcome_message():
     # replace pass with print statment explaing the program to the user
      print("welcome to the random idaho tour selector!  I will randomly select for you popular tourist towns, good food, and something to do in every town! lets get started!")

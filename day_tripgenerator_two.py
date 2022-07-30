@@ -41,6 +41,10 @@ def eats_picker():
         if user_choice == "y":
             print("good eats!")
             user_choice = input("enter selection")
+            return random_food
+        elif user_choice == "n":
+            print(f'we have selected {random_food} for your meal.  Is that yummy enough? y/n')
+            continue
 
 def wheels_picker():
     random_car = give_random_from_list(wheels_list)
@@ -50,6 +54,7 @@ def wheels_picker():
         if user_choice == "y":
             print("peel the road back!")
             user_choice = ("enter selection")
+            
     
 
 def towns_picker():
@@ -73,11 +78,13 @@ def confirm_trip(confirmed_fun_place):
 # this will call all of our other function calls 
 def controller_function():
     welcome_message()
+    # need to setup the 3 other function calls like this one 
     confirmed_fun_place = fun_place_picker()
 
 
 
-
+    # after setting up the above function calls you will need to pass their results 
+    # into this confirm_trip function to have access to their values
     confirm_trip(confirmed_fun_place)
 controller_function()
     
